@@ -4,78 +4,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JokerFit Club - About Us</title>
+  <title>About Us - JokerFit Club</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+    * {
+      box-sizing: border-box;
     }
-
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #222;
+    }
     header {
       background-color: #111;
       color: white;
       padding: 20px;
       text-align: center;
     }
-
     nav ul {
       list-style-type: none;
-      margin: 10px 0;
+      margin: 0;
       padding: 0;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
     }
-
     nav ul li {
-      margin: 0 15px;
+      margin: 10px 15px;
     }
-
     nav ul li a {
-      color: #fff;
+      color: white;
       text-decoration: none;
       font-weight: bold;
     }
-
     main {
-      max-width: 1000px;
-      margin: auto;
+      max-width: 900px;
+      margin: 30px auto;
       padding: 20px;
     }
-
     h2 {
-      color: #cc0000;
       text-align: center;
+      color: #cc0000;
+      margin-bottom: 20px;
     }
-
-    .about-section {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    section {
+      margin-bottom: 30px;
+      line-height: 1.7em;
     }
-
-    .about-section img {
+    .about-img {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .about-img img {
       max-width: 100%;
+      height: auto;
       border-radius: 10px;
-      margin-top: 20px;
     }
-
     footer {
       background-color: #111;
       color: white;
       text-align: center;
-      padding: 15px;
-      margin-top: 30px;
+      padding: 20px;
+      margin-top: 40px;
     }
-
+    footer a {
+      color: #ff6666;
+      text-decoration: none;
+      margin: 0 5px;
+    }
     @media (max-width: 600px) {
       nav ul {
         flex-direction: column;
       }
-
       nav ul li {
         margin: 8px 0;
       }
@@ -88,7 +89,7 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="programs.html">Programs</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="feedback.html">Feedback</a></li>
@@ -98,23 +99,59 @@
 
   <main>
     <h2>About JokerFit Club</h2>
-    <div class="about-section">
-      <p><strong>JokerFit Club</strong> is a dynamic fitness and wellness center committed to helping people of all ages achieve their fitness goals in a fun, motivating, and professional environment. We specialize in strength training, cardio conditioning, yoga, and personalized nutrition coaching.</p>
 
-      <p>Our certified trainers and nutritionists provide expert guidance tailored to your unique fitness journey. At JokerFit, we believe fitness should be a lifestyle — not a punishment. That’s why we combine cutting-edge facilities with a vibrant community to help keep you inspired and moving forward.</p>
+    <section>
+      <p>
+        <strong>Welcome to JokerFit Club</strong> — your ultimate fitness companion for transformation and strength.
+        We believe that fitness should be accessible, motivating, and fun for everyone. Whether you're a beginner or a seasoned athlete, we have a place for you.
+      </p>
+    </section>
 
-      <p>With a wide range of programs and state-of-the-art equipment, JokerFit is your partner in building a healthier, stronger, and more confident you.</p>
-
-      <img src="images/team.jpg" alt="JokerFit professional team photo" width="800" height="400">
+    <div class="about-img">
+      <img src="images/about-banner.jpg" alt="JokerFit Club Training Session" />
     </div>
+
+    <section>
+      <h3>Our Mission</h3>
+      <p>
+        At JokerFit Club, our mission is to empower individuals through world-class training, coaching, and nutrition support.
+        We aim to create a welcoming, energizing environment that inspires people to reach their physical and mental potential.
+      </p>
+    </section>
+
+    <section>
+      <h3>What We Offer</h3>
+      <ul>
+        <li>Personalized Strength & Conditioning Programs</li>
+        <li>Cardio Workouts and High-Intensity Training</li>
+        <li>Yoga and Flexibility Coaching</li>
+        <li>Professional Nutrition Counseling</li>
+        <li>Community Events and Challenges</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Meet Our Team</h3>
+      <p>
+        Our certified trainers and coaches bring years of experience, passion, and a love for fitness.
+        They’re not just here to instruct you—they’re here to guide, encourage, and push you to your best self.
+      </p>
+    </section>
+
+    <section>
+      <h3>Join Us Today</h3>
+      <p>
+        Join JokerFit Club and take the first step toward a healthier, stronger lifestyle. Let's lift, run, stretch, sweat, and grow—together.
+      </p>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 JokerFit Club. All rights reserved.</p>
-    <p>Follow us: 
+    <p>Connect with us:
       <a href="#">Instagram</a> |
       <a href="#">Facebook</a> |
-      <a href="#">Twitter</a>
+      <a href="#">YouTube</a>
     </p>
   </footer>
 </body>
