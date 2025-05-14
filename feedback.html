@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore our workout plans at JokerFit Club">
-    <title>JokerFit Club | Workout Plans</title>
+    <meta name="description" content="Provide feedback or contact JokerFit Club">
+    <title>JokerFit Club | Feedback</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Global Styles */
@@ -154,105 +154,125 @@
             margin-bottom: 20px;
         }
 
-        /* Workouts Page */
-        .plan-categories {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            padding: 60px 0 30px;
-            flex-wrap: wrap;
-        }
-
-        .category-btn {
-            padding: 10px 20px;
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .category-btn:hover,
-        .category-btn.active {
-            background-color: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
-        }
-
-        .plans-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            padding: 30px 0 60px;
-        }
-
-        .plan-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .plan-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .plan-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .plan-content {
-            padding: 20px;
-        }
-
-        .plan-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-        }
-
-        .plan-content p {
-            margin-bottom: 15px;
-        }
-
-        .plan-content ul {
-            margin: 15px 0;
-            list-style-type: none;
-        }
-
-        .plan-content ul li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            align-items: center;
-        }
-
-        .plan-content ul li i {
-            margin-right: 10px;
-            color: var(--primary-color);
-        }
-
-        .custom-plan {
-            background-color: var(--secondary-color);
+        /* Feedback Page */
+        .feedback-form {
             padding: 60px 0;
-            text-align: center;
-            color: white;
         }
 
-        .custom-content h3 {
-            font-size: 2rem;
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
             margin-bottom: 20px;
         }
 
-        .custom-content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .required {
+            color: var(--primary-color);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .checkbox-group input {
+            margin-right: 8px;
+        }
+
+        .contact-info {
+            max-width: 800px;
+            margin: 60px auto 0;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .contact-method {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-method i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .contact-method h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .social-media h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
         }
 
         /* Footer Styles */
@@ -312,22 +332,6 @@
             margin-bottom: 10px;
         }
 
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .social-icons a {
-            font-size: 1.5rem;
-            color: white;
-            transition: color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: var(--primary-color);
-        }
-
         /* Responsive Styles */
         @media (max-width: 768px) {
             nav ul {
@@ -363,8 +367,8 @@
                 font-size: 2rem;
             }
             
-            .plans-grid {
-                grid-template-columns: 1fr;
+            .checkbox-group {
+                flex-direction: column;
             }
         }
     </style>
@@ -381,8 +385,8 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li class="active"><a href="workouts.html">Workout Plans</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="workouts.html">Workout Plans</a></li>
+                    <li class="active"><a href="feedback.html">Feedback</a></li>
                 </ul>
             </nav>
             <div class="mobile-menu">
@@ -393,114 +397,91 @@
 
     <section class="page-header">
         <div class="container">
-            <h2>Workout Plans</h2>
-            <p>Customized workout plans for every fitness level and goal</p>
+            <h2>Feedback & Contact</h2>
+            <p>We'd love to hear from you! Share your feedback or ask us any questions.</p>
         </div>
     </section>
 
-    <section class="workout-plans">
+    <section class="feedback-form">
         <div class="container">
-            <div class="plan-categories">
-                <button class="category-btn active" data-category="all">All Plans</button>
-                <button class="category-btn" data-category="beginner">Beginner</button>
-                <button class="category-btn" data-category="intermediate">Intermediate</button>
-                <button class="category-btn" data-category="advanced">Advanced</button>
-            </div>
+            <form id="contactForm" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
 
-            <div class="plans-grid">
-                <div class="plan-card" data-category="beginner">
-                    <img src="images/workout1.jpg" alt="Beginner Full Body Workout" width="350" height="200">
-                    <div class="plan-content">
-                        <h3>Beginner Full Body</h3>
-                        <p>Perfect for those just starting their fitness journey. This plan focuses on fundamental movements and building a solid foundation.</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 3 days per week</li>
-                            <li><i class="fas fa-check"></i> 30-45 minute sessions</li>
-                            <li><i class="fas fa-check"></i> Equipment optional</li>
-                        </ul>
-                        <a href="feedback.html" class="btn">Get This Plan</a>
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject <span class="required">*</span></label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="membership">Membership Inquiry</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="complaint">Complaint</option>
+                        <option value="suggestion">Suggestion</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" required placeholder="Enter your message here..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="hear-about">How did you hear about us?</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="hear-about" value="social"> Social Media</label>
+                        <label><input type="checkbox" name="hear-about" value="friend"> Friend/Family</label>
+                        <label><input type="checkbox" name="hear-about" value="search"> Search Engine</label>
+                        <label><input type="checkbox" name="hear-about" value="ad"> Advertisement</label>
+                        <label><input type="checkbox" name="hear-about" value="other"> Other</label>
                     </div>
                 </div>
 
-                <div class="plan-card" data-category="intermediate">
-                    <img src="images/workout2.jpg" alt="Muscle Building Program" width="350" height="200">
-                    <div class="plan-content">
-                        <h3>Muscle Building</h3>
-                        <p>Designed to help you pack on lean muscle mass through progressive overload and proper nutrition.</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 4-5 days per week</li>
-                            <li><i class="fas fa-check"></i> 45-60 minute sessions</li>
-                            <li><i class="fas fa-check"></i> Gym equipment required</li>
-                        </ul>
-                        <a href="feedback.html" class="btn">Get This Plan</a>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-large">Submit Feedback</button>
+                </div>
+            </form>
+
+            <div class="contact-info">
+                <h3>Other Ways to Reach Us</h3>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Visit Us</h4>
+                        <p>123 Fitness Street<br>Health City, HC 12345</p>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <h4>Call Us</h4>
+                        <p>(123) 456-7890<br>Mon-Fri: 6am-10pm<br>Sat-Sun: 8am-8pm</p>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email Us</h4>
+                        <p>info@jokerfitclub.com<br>support@jokerfitclub.com</p>
                     </div>
                 </div>
 
-                <div class="plan-card" data-category="intermediate">
-                    <img src="images/workout1.jpg" alt="Fat Loss Circuit" width="350" height="200">
-                    <div class="plan-content">
-                        <h3>Fat Loss Circuit</h3>
-                        <p>High-intensity workouts designed to maximize calorie burn and boost metabolism.</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 5 days per week</li>
-                            <li><i class="fas fa-check"></i> 30-40 minute sessions</li>
-                            <li><i class="fas fa-check"></i> Minimal equipment needed</li>
-                        </ul>
-                        <a href="feedback.html" class="btn">Get This Plan</a>
+                <div class="social-media">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-
-                <div class="plan-card" data-category="advanced">
-                    <img src="images/workout2.jpg" alt="Advanced Strength Program" width="350" height="200">
-                    <div class="plan-content">
-                        <h3>Advanced Strength</h3>
-                        <p>For experienced lifters looking to increase their strength in major lifts.</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 5 days per week</li>
-                            <li><i class="fas fa-check"></i> 60-75 minute sessions</li>
-                            <li><i class="fas fa-check"></i> Full gym access required</li>
-                        </ul>
-                        <a href="feedback.html" class="btn">Get This Plan</a>
-                    </div>
-                </div>
-
-                <div class="plan-card" data-category="beginner">
-                    <img src="images/workout1.jpg" alt="Yoga Foundation" width="350" height="200">
-                    <div class="plan-content">
-                        <h3>Yoga Foundation</h3>
-                        <p>Improve flexibility, mobility, and mindfulness with this beginner-friendly yoga program.</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 3-5 days per week</li>
-                            <li><i class="fas fa-check"></i> 20-40 minute sessions</li>
-                            <li><i class="fas fa-check"></i> Yoga mat recommended</li>
-                        </ul>
-                        <a href="feedback.html" class="btn">Get This Plan</a>
-                    </div>
-                </div>
-
-                <div class="plan-card" data-category="intermediate">
-                    <img src="images/workout2.jpg" alt="Functional Fitness" width="350" height="200">
-                    <div class="plan-content">
-                        <h3>Functional Fitness</h3>
-                        <p>Train for real-life movements that improve your daily activities and sports performance.</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 4 days per week</li>
-                            <li><i class="fas fa-check"></i> 45 minute sessions</li>
-                            <li><i class="fas fa-check"></i> Some equipment needed</li>
-                        </ul>
-                        <a href="feedback.html" class="btn">Get This Plan</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="custom-plan">
-        <div class="container">
-            <div class="custom-content">
-                <h3>Need a Custom Plan?</h3>
-                <p>Our trainers can create a workout program tailored specifically to your goals, schedule, and equipment availability.</p>
-                <a href="feedback.html" class="btn btn-large">Request Custom Plan</a>
             </div>
         </div>
     </section>
@@ -561,28 +542,41 @@
                 });
             });
             
-            // Workout Plan Filter
-            const categoryBtns = document.querySelectorAll('.category-btn');
-            const planCards = document.querySelectorAll('.plan-card');
+            // Form Validation
+            const form = document.getElementById('contactForm');
             
-            categoryBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    categoryBtns.forEach(btn => btn.classList.remove('active'));
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    const category = this.getAttribute('data-category');
-                    
-                    // Show/hide plan cards based on category
-                    planCards.forEach(card => {
-                        if (category === 'all' || card.getAttribute('data-category') === category) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
+            form.addEventListener('submit', function(e) {
+                let isValid = true;
+                
+                // Validate required fields
+                const requiredFields = form.querySelectorAll('[required]');
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.style.borderColor = 'red';
+                    } else {
+                        field.style.borderColor = '#ddd';
+                    }
                 });
+                
+                // Validate email format
+                const emailField = form.querySelector('[type="email"]');
+                if (emailField && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
+                    isValid = false;
+                    emailField.style.borderColor = 'red';
+                } else if (emailField) {
+                    emailField.style.borderColor = '#ddd';
+                }
+                
+                if (!isValid) {
+                    e.preventDefault();
+                    alert('Please fill out all required fields correctly.');
+                } else {
+                    // In a real application, you would submit the form here
+                    alert('Thank you for your feedback! We will get back to you soon.');
+                    form.reset();
+                    e.preventDefault(); // Remove this in a real implementation
+                }
             });
         });
     </script>
