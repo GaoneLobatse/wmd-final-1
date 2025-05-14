@@ -1,90 +1,108 @@
-<!-- programs.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JokerFit Club - Programs</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>JokerFit Club</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="programs.html">Programs</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section>
-      <h2>Our Fitness Programs</h2>
-      <ul>
-        <li>Strength Training</li>
-        <li>Cardio Conditioning</li>
-        <li>Yoga and Stretching</li>
-        <li>Nutrition and Weight Loss Plans</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 JokerFit Club. All rights reserved.</p>
-  </footer>
-</body>
-</html>
-
-<!-- gallery.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JokerFit Club - Gallery</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>JokerFit Club</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="programs.html">Programs</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="images/workout1.jpg" alt="Workout Session 1" width="300" height="200">
-      <img src="images/groupclass.jpg" alt="Group Class" width="300" height="200">
-      <img src="images/equipment.jpg" alt="Equipment" width="300" height="200">
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 JokerFit Club. All rights reserved.</p>
-  </footer>
-</body>
-</html>
-
 <!-- feedback.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JokerFit Club - Feedback</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 10px 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #cc0000;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+
+    input[type="submit"] {
+      background-color: #cc0000;
+      color: white;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #a30000;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        margin: 8px 0;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -101,29 +119,40 @@
   </header>
 
   <main>
-    <h2>Feedback Form</h2>
+    <h2>We Value Your Feedback</h2>
     <form action="#" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your name">
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email">
 
-      <label for="service">Service Used:</label>
-      <input type="text" id="service" name="service" required>
+      <label for="program">Which program did you use?</label>
+      <select id="program" name="program" required>
+        <option value="">--Select a Program--</option>
+        <option value="strength">Strength Training</option>
+        <option value="cardio">Cardio Conditioning</option>
+        <option value="yoga">Yoga & Flexibility</option>
+        <option value="nutrition">Nutrition Coaching</option>
+      </select>
 
-      <label for="rating">Rating (1-5):</label>
+      <label for="rating">Rate Your Experience (1-5):</label>
       <input type="number" id="rating" name="rating" min="1" max="5" required>
 
-      <label for="comments">Comments:</label>
-      <textarea id="comments" name="comments" required></textarea>
+      <label for="comments">Additional Comments:</label>
+      <textarea id="comments" name="comments" rows="5" placeholder="Write your comments here..."></textarea>
 
-      <button type="submit">Submit</button>
+      <input type="submit" value="Submit Feedback">
     </form>
   </main>
 
   <footer>
     <p>&copy; 2025 JokerFit Club. All rights reserved.</p>
+    <p>Follow us: 
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a>
+    </p>
   </footer>
 </body>
 </html>
