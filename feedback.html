@@ -4,66 +4,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JokerFit Club - Feedback</title>
+  <title>Feedback - JokerFit Club</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background-color: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
       color: #222;
     }
-
     header {
-      background-color: #111;
+      background-color: #1a1a1a;
       color: white;
       padding: 20px;
       text-align: center;
     }
-
     nav ul {
       list-style: none;
-      margin: 10px 0;
       padding: 0;
+      margin: 10px 0 0 0;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
     }
-
     nav ul li {
-      margin: 0 15px;
+      margin: 10px 15px;
     }
-
     nav ul li a {
-      color: #fff;
+      color: white;
       text-decoration: none;
       font-weight: bold;
     }
-
     main {
       max-width: 800px;
       margin: auto;
       padding: 20px;
     }
-
     h2 {
       text-align: center;
-      color: #cc0000;
+      color: #b30000;
     }
-
     form {
       background-color: #fff;
-      padding: 20px;
+      padding: 25px;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-
     label {
       display: block;
       margin-top: 15px;
       font-weight: bold;
     }
-
-    input, select, textarea {
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
@@ -71,33 +69,48 @@
       border: 1px solid #ccc;
       font-size: 1em;
     }
-
+    textarea {
+      resize: vertical;
+    }
     input[type="submit"] {
-      background-color: #cc0000;
+      background-color: #b30000;
       color: white;
       border: none;
+      padding: 12px;
       margin-top: 20px;
-      cursor: pointer;
+      font-size: 1em;
       font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
     }
-
     input[type="submit"]:hover {
-      background-color: #a30000;
+      background-color: #800000;
     }
-
     footer {
-      background-color: #111;
+      background-color: #1a1a1a;
       color: white;
       text-align: center;
       padding: 15px;
-      margin-top: 30px;
+      margin-top: 40px;
     }
-
+    footer a {
+      color: #ff6666;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+    .form-img {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-img img {
+      max-width: 100px;
+      height: auto;
+    }
     @media (max-width: 600px) {
       nav ul {
         flex-direction: column;
       }
-
       nav ul li {
         margin: 8px 0;
       }
@@ -110,7 +123,7 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="programs.html">Programs</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="feedback.html">Feedback</a></li>
@@ -119,39 +132,42 @@
   </header>
 
   <main>
-    <h2>We Value Your Feedback</h2>
+    <h2>Share Your Feedback</h2>
+    <div class="form-img">
+      <img src="images/feedback-icon.png" alt="Feedback Icon" />
+    </div>
     <form action="#" method="post">
       <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" required placeholder="Enter your name">
+      <input type="text" id="name" name="name" required placeholder="Enter your name" />
 
       <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" required placeholder="Enter your email">
+      <input type="email" id="email" name="email" required placeholder="Enter your email" />
 
-      <label for="program">Which program did you use?</label>
+      <label for="program">Which program did you participate in?</label>
       <select id="program" name="program" required>
         <option value="">--Select a Program--</option>
         <option value="strength">Strength Training</option>
-        <option value="cardio">Cardio Conditioning</option>
-        <option value="yoga">Yoga & Flexibility</option>
+        <option value="cardio">Cardio Workouts</option>
+        <option value="yoga">Yoga Sessions</option>
         <option value="nutrition">Nutrition Coaching</option>
       </select>
 
-      <label for="rating">Rate Your Experience (1-5):</label>
-      <input type="number" id="rating" name="rating" min="1" max="5" required>
+      <label for="experience">Rate your experience (1 = Poor, 5 = Excellent):</label>
+      <input type="number" id="experience" name="experience" min="1" max="5" required />
 
-      <label for="comments">Additional Comments:</label>
-      <textarea id="comments" name="comments" rows="5" placeholder="Write your comments here..."></textarea>
+      <label for="message">Your Comments:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your feedback here..."></textarea>
 
-      <input type="submit" value="Submit Feedback">
+      <input type="submit" value="Submit Feedback" />
     </form>
   </main>
 
   <footer>
     <p>&copy; 2025 JokerFit Club. All rights reserved.</p>
-    <p>Follow us: 
+    <p>Connect with us:
       <a href="#">Instagram</a> |
       <a href="#">Facebook</a> |
-      <a href="#">Twitter</a>
+      <a href="#">YouTube</a>
     </p>
   </footer>
 </body>
